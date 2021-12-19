@@ -57,7 +57,7 @@ I'm be eating...
 python提供了一种语法：@。只需要在需要装饰的函数（apple）使用@和装饰器函数即可：
 
 ```python
-@decorate_christmas()   #装饰器函数
+@decorate_christmas   #装饰器
 def apple():    #被装饰的函数
     print("I'm be eating...")
 ```
