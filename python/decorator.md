@@ -40,8 +40,10 @@ def decorate_fruit(func):   #水果茶装饰
 装饰器定义好了，如何使用呢？
 
 最直观的用法：
+```python
 decorate_apple = decorate_christmas(apple)
 decorate_apple()
+```
 
 输出如下：
 ```
