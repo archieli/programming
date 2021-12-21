@@ -51,4 +51,4 @@ str_1 str_2
 这套流程下来，有什么好处呢？
 
 - 可以代替python中的类。上面的demo_int、demo_str就是同一个函数closure_demo创建的，和类创建对象比较像，但是比起类会更加优雅，还能实现数据隐藏。这正是python这种语言所追求的。
-- Python装饰器（decorator）实现的底层技术。装饰器是非常灵活的设计模式，使用非常广泛。
+- [Python装饰器](https://github.com/archieli/programming/blob/main/python/decorator.md)（decorator）实现的底层技术。装饰器是非常灵活的设计模式，使用非常广泛。
