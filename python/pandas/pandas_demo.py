@@ -66,10 +66,32 @@ class PandasDemo():
         print(self.demo_df.groupby('education').apply(self.apply_sum, 1, 2, 3, base1=1, base2=2))
 
 
+    def dataframe_at_loc_test(self):
+        """dataframe查找/修改 指定位置的元素"""
+
+        self.demo_df.at[0, 'height'] = 1000 #at，使用行标签名和列标签名查找/修改某一个元素
+        print(self.demo_df.at[0, 'height'])
+
+        self.demo_df.iat[0, 0] = 2000   #iat，使用行列的整形值查找/修改某一个元素
+        print(self.demo_df.iat[0, 0])
+
+        #loc，查找/设置 多组行或者列
+        print(self.demo_df.loc[1], type(self.demo_df.loc[1]))  #返回第二行数据，类型为Series
+        print(self.demo_df.loc[[0, 3]], type(self.demo_df.loc[[0, 3]]))    #返回第一和第四行数据，类型为dataframe
+        print(self.demo_df.loc[0, 'height'])    #使用行标签名和列标签名查找/修改某一个元素，类似at
+
+        self.demo_df.loc[:, 'height'] = 180 #设置整列
+        print(self.demo_df)
+
+        self.demo_df.loc[self.demo_df['gender']=='男'] = 0  #设置满足条件的整行为0
+        print(self.demo_df)
+
+
 if __name__=='__main__':
 
     demo = PandasDemo()
     #demo.dataframe_groupby_map()
     #demo.dataframe_groupby_test()
-    demo.dataframe_groupby_apply_test()
+    #demo.dataframe_groupby_apply_test()
+    demo.dataframe_at_loc_test()
 
